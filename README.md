@@ -39,6 +39,20 @@ whether you are a hobbyist, programmer, experienced CAD user, student or teacher
     * **Qt** Graphical user interface built with Qt
 
 
+Linux: Workaround for the xcb issue
+------------------------------------
+
+When attempting to run the AppImage, it may refuse to start with an error message ending with the:
+
+``` ${MAIN} "$@" ```
+
+This is because FreeCAD has problems with loading the xcb. To make FreeCAD work, you need to type the following code:
+
+``` sudo xhost +si:localuser:$USER ```
+
+<a href="https://github.com/mdziczkowski">~Michal D.</a>
+
+
 Installing
 ----------
 
